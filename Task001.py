@@ -7,7 +7,10 @@ def fibonacci(q):
       fib=result[i-1]+result[i-2]
       result.append(fib)
    return(result)
-
 print('Задайте количество первых элементов')
 number=int(input(' последовательности Фибоначчи:  '))
-print(f'Ряд Фибоначчи {fibonacci(number)}')
+fibonacci_result= str(fibonacci(number))
+data = open('Fibonacci.txt', mode = 'w')
+data.writelines(fibonacci_result)
+data.close()
+# print(f'Ряд Фибоначчи {fibonacci(number)}')
